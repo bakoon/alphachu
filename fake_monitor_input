@@ -1,0 +1,18 @@
+# fake monitor
+sudo apt-get install xvfb -y
+
+# create fake monitor
+Xvfb :99 -ac -screen 0 1280x1024x24 > /dev/null &
+
+# set environment (bash)
+echo "export DISPLAY:99" >> ~/.bashrc
+
+
+# fake input
+sudo apt-get install xdotool
+
+# how to use
+# https://www.semicomplete.com/projects/xdotool/xdotool.xhtml
+
+
+
